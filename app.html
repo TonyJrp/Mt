@@ -1,0 +1,26 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    {{ HEAD }}
+</head>
+
+<body>
+    <script>
+        htmlsize();
+        window.onresize = function() {
+            htmlsize();
+        }
+
+        function htmlsize() {
+            var x = 1920 / 100;
+            var width = document.body.clientWidth;
+            var fsize = width / x;
+            document.querySelector('html').style.fontSize = fsize + "px";
+            document.querySelector('body').style.fontSize = fsize + "px";
+        }
+    </script>
+    {{ APP }}
+</body>
+
+</html>
